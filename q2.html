@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мое веб-приложение</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Добро пожаловать на мою страницу!</h1>
+  
+  <p>Введите ваше сообщение в поле ниже и нажмите кнопку для отправки.</p>
+  
+  <!-- Форма для ввода -->
+  <form id="myForm">
+    <input type="text" id="myInput" placeholder="Введите ваше сообщение..." />
+    <button type="submit">Отправить сообщение</button>
+  </form>
+  
+  <!-- Место для сообщения -->
+  <div id="message"></div>
+  
+  <script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Отправлено!');
+      document.getElementById('message').textContent = 'Ваше сообщение успешно отправлено!';
+      document.getElementById('myInput').value = '';
+    });
+  </script>
+</body>
+</html>
